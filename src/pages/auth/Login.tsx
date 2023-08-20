@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -65,7 +66,10 @@ const Login = () => {
     <div className="h-screen w-screen bg-secondary">
       <div className="h-full container flex justify-center items-center">
         <div className="w-96 bg-white rounded-md flex flex-col justify-center items-start p-5 font-medium">
-          <div className="text-2xl mb-5">Log In</div>
+          <div className="w-full flex flex-col justify-center items-center">
+            <div className="text-3xl text-center">Banjararide</div>
+            <div className="font-light text-center mb-5">Admin Console</div>
+          </div>
           {error && (
             <Alert variant="destructive" className="mb-3 text-red-500">
               <GoAlert className="h-4 w-4" />
@@ -88,10 +92,11 @@ const Login = () => {
                         className="w-full"
                       />
                     </FormControl>
+                    <FormDescription>Username of your account</FormDescription>
                     <FormMessage color="#f6f6f6" />
                   </FormItem>
                 )}
-              />
+                />
               <FormField
                 control={form.control}
                 name="password"
@@ -104,8 +109,9 @@ const Login = () => {
                         placeholder="password"
                         {...field}
                         className="w-full"
-                      />
+                        />
                     </FormControl>
+                    <FormDescription>Password of your account</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
